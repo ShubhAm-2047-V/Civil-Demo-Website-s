@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BuildEmpire – Premium civil construction and luxury real estate company delivering iconic structures with 15+ years of excellence, 50+ landmark projects across India." />
+  <meta name="keywords" content="civil construction, luxury real estate, architecture, infrastructure, BuildEmpire, construction company" />
+  <meta property="og:title" content="BuildEmpire – Premium Civil Construction & Luxury Real Estate" />
+  <meta property="og:description" content="Crafting skylines since 2009. Residential, Commercial, Infrastructure & Interior Design excellence." />
+  <title>BuildEmpire – Premium Civil Construction & Real Estate</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ GLOW ORBS (GLASSMORPHISM BACKGROUND) ═══════════════════ -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+
+  <!-- ═══════════════════ LOADER ═══════════════════ -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-logo">
+        <h1 class="loader-title">BuildEmpire</h1>
+        <p class="loader-subtitle">Premium Civil Construction</p>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loaderBar"></div>
+      </div>
+      <p class="loader-text">Crafting Excellence...</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="navLogo">
+        <span class="logo-icon-wrap">🏗️</span>
+        <span class="logo-text">Build<span class="logo-accent">Empire</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#why-us" class="nav-link" data-section="why-us">Why Us</a></li>
+        <li><a href="#testimonials" class="nav-link" data-section="testimonials">Reviews</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="nav-cta btn-gold">Get Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO SECTION ═══════════════════ -->
+  <section class="hero" id="home">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-up">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Premium Construction Since 2009</span>
+        <span class="eyebrow-line"></span>
+      </div>
+
+      <h1 class="hero-title reveal-up">
+        <span class="hero-title-bold">Building</span> Your<br/>
+        <span class="hero-title-gold">Vision</span> Into<br/>
+        Reality
+      </h1>
+
+      <p class="hero-subtitle reveal-up">
+        Crafting iconic structures with precision, passion & unmatched luxury. From residential masterpieces to landmark commercial towers — we build the future.
+      </p>
+
+      <div class="hero-cta reveal-up">
+        <a href="#projects" class="btn btn-gold btn-lg" id="viewProjectsBtn">
+          <i class="fas fa-building"></i>
+          View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline btn-lg" id="contactBtn">
+          <i class="fas fa-phone-alt"></i>
+          Contact Us
+        </a>
+      </div>
+
+      <div class="hero-stats reveal-up">
+        <div class="stat-item">
+          <span class="stat-num" data-target="50" data-suffix="+">0</span>
+          <span class="stat-label">Projects Done</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="15" data-suffix="+">0</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="100" data-suffix="+">0</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="25" data-suffix="+">0</span>
+          <span class="stat-label">Ongoing Projects</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span class="scroll-text">Scroll</span>
+      </div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+      <div class="float-el float-el-1"><i class="fas fa-drafting-compass"></i></div>
+      <div class="float-el float-el-2"><i class="fas fa-hard-hat"></i></div>
+      <div class="float-el float-el-3"><i class="fas fa-ruler-combined"></i></div>
+      <div class="float-el float-el-4"><i class="fas fa-cube"></i></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT SECTION ═══════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Our Story</span>
+        <h2 class="section-title reveal-up">About <span class="gold-text">BuildEmpire</span></h2>
+        <p class="section-subtitle reveal-up">A legacy of excellence, innovation, and architectural mastery spanning over 15 years.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-img-wrap">
+            <div class="about-img-main glass-card">
+              <div class="about-3d-building" id="aboutCanvas3D"></div>
+              <div class="about-img-badge">
+                <span class="badge-num">15+</span>
+                <span class="badge-txt">Years of Excellence</span>
+              </div>
+            </div>
+            <div class="about-img-float glass-card">
+              <i class="fas fa-award gold-text"></i>
+              <div>
+                <strong>ISO Certified</strong>
+                <span>Quality Assured</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal-right">
+          <h3 class="about-heading">We Don't Just Build Structures,<br/><span class="gold-text">We Build Legacies</span></h3>
+          <p class="about-desc">Founded in 2009, BuildEmpire has grown from a small construction firm to one of the most trusted names in premium civil construction and luxury real estate. We combine cutting-edge technology with artisan craftsmanship to deliver projects that stand the test of time.</p>
+          <p class="about-desc">Our team of 200+ engineers, architects, and designers work tirelessly to transform your vision into iconic structures that redefine skylines.</p>
+
+          <div class="about-pillars">
+            <div class="pillar">
+              <i class="fas fa-medal gold-text"></i>
+              <div>
+                <strong>Award-Winning</strong>
+                <span>12 National Awards</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <i class="fas fa-users gold-text"></i>
+              <div>
+                <strong>Expert Team</strong>
+                <span>200+ Professionals</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <i class="fas fa-leaf gold-text"></i>
+              <div>
+                <strong>Eco-Friendly</strong>
+                <span>Green Building Certified</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-mission">
+            <div class="mission-card glass-card">
+              <i class="fas fa-bullseye gold-text"></i>
+              <div>
+                <h4>Our Mission</h4>
+                <p>To deliver world-class construction with uncompromising quality, on time and within budget, surpassing client expectations every single time.</p>
+              </div>
+            </div>
+            <div class="mission-card glass-card">
+              <i class="fas fa-eye gold-text"></i>
+              <div>
+                <h4>Our Vision</h4>
+                <p>To be the most trusted and innovative construction company in India, shaping sustainable skylines for future generations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline-wrap">
+        <h3 class="timeline-title reveal-up">Our <span class="gold-text">Journey</span></h3>
+        <div class="timeline">
+          <div class="timeline-item reveal-up" data-delay="0">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass-card">
+              <span class="tl-year gold-text">2009</span>
+              <h4>Foundation</h4>
+              <p>BuildEmpire established with a vision to redefine construction standards in India.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-up" data-delay="100">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass-card">
+              <span class="tl-year gold-text">2013</span>
+              <h4>First Milestone</h4>
+              <p>Completed 10 landmark projects and received our first National Construction Award.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-up" data-delay="200">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass-card">
+              <span class="tl-year gold-text">2017</span>
+              <h4>Expansion</h4>
+              <p>Expanded operations to 5 major cities with a team of 100+ professionals.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-up" data-delay="300">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass-card">
+              <span class="tl-year gold-text">2021</span>
+              <h4>Innovation Hub</h4>
+              <p>Launched our 3D design studio and BIM (Building Information Modeling) center.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-up" data-delay="400">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass-card">
+              <span class="tl-year gold-text">2024</span>
+              <h4>Market Leader</h4>
+              <p>Recognized as a top-5 premium construction company nationally with 50+ projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SERVICES SECTION ═══════════════════ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">What We Do</span>
+        <h2 class="section-title reveal-up">Our <span class="gold-text">Services</span></h2>
+        <p class="section-subtitle reveal-up">Comprehensive construction solutions tailored to your vision and crafted with precision.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card glass-card reveal-up" data-delay="0">
+          <div class="service-icon-wrap">
+            <div class="service-icon-3d">
+              <i class="fas fa-home"></i>
+            </div>
+          </div>
+          <h3>Residential Construction</h3>
+          <p>Luxury villas, apartments, and bungalows crafted with premium materials and exceptional attention to detail.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle gold-text"></i> Custom villa design</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Apartment complexes</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Duplex & penthouse</li>
+          </ul>
+          <a href="#contact" class="service-link">Know More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card glass-card reveal-up" data-delay="100">
+          <div class="service-icon-wrap">
+            <div class="service-icon-3d">
+              <i class="fas fa-building"></i>
+            </div>
+          </div>
+          <h3>Commercial Construction</h3>
+          <p>State-of-the-art office towers, malls, hotels, and commercial complexes that redefine business spaces.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle gold-text"></i> Corporate towers</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Shopping centers</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Hotel & hospitality</li>
+          </ul>
+          <a href="#contact" class="service-link">Know More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card glass-card reveal-up" data-delay="200">
+          <div class="service-icon-wrap">
+            <div class="service-icon-3d">
+              <i class="fas fa-road"></i>
+            </div>
+          </div>
+          <h3>Road Development</h3>
+          <p>High-quality road construction, highway development, and smart urban mobility infrastructure solutions.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle gold-text"></i> Highway construction</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Urban road design</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Smart traffic systems</li>
+          </ul>
+          <a href="#contact" class="service-link">Know More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card glass-card reveal-up" data-delay="300">
+          <div class="service-icon-wrap">
+            <div class="service-icon-3d">
+              <i class="fas fa-city"></i>
+            </div>
+          </div>
+          <h3>Infrastructure Projects</h3>
+          <p>Bridges, flyovers, metro stations, industrial plants, and large-scale civil infrastructure development.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle gold-text"></i> Bridge engineering</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Metro & transit</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Industrial plants</li>
+          </ul>
+          <a href="#contact" class="service-link">Know More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card glass-card reveal-up" data-delay="400">
+          <div class="service-icon-wrap">
+            <div class="service-icon-3d">
+              <i class="fas fa-couch"></i>
+            </div>
+          </div>
+          <h3>Interior Design</h3>
+          <p>Luxury interior design services that transform spaces into sophisticated, functional works of art.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle gold-text"></i> 3D visualization</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Premium furnishings</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Smart home design</li>
+          </ul>
+          <a href="#contact" class="service-link">Know More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card glass-card reveal-up" data-delay="500">
+          <div class="service-icon-wrap">
+            <div class="service-icon-3d">
+              <i class="fas fa-tasks"></i>
+            </div>
+          </div>
+          <h3>Project Management</h3>
+          <p>End-to-end project management ensuring timely delivery, budget adherence, and quality excellence.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle gold-text"></i> BIM technology</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Real-time tracking</li>
+            <li><i class="fas fa-check-circle gold-text"></i> Quality audits</li>
+          </ul>
+          <a href="#contact" class="service-link">Know More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROJECTS SECTION ═══════════════════ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Our Portfolio</span>
+        <h2 class="section-title reveal-up">Featured <span class="gold-text">Projects</span></h2>
+        <p class="section-subtitle reveal-up">Landmark projects that define excellence in construction and architectural innovation.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters reveal-up">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card reveal-up" data-category="residential" data-delay="0">
+          <div class="project-img-wrap">
+            <div class="project-img proj-img-1"></div>
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openProject(0)">
+                <i class="fas fa-expand-alt"></i> View Details
+              </button>
+            </div>
+            <div class="project-tag">Residential</div>
+          </div>
+          <div class="project-info">
+            <h3>Skyline Residences</h3>
+            <p>Mumbai, Maharashtra</p>
+            <div class="project-meta">
+              <span><i class="fas fa-ruler-combined"></i> 45,000 sq.ft</span>
+              <span><i class="fas fa-clock"></i> 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="commercial" data-delay="100">
+          <div class="project-img-wrap">
+            <div class="project-img proj-img-2"></div>
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openProject(1)">
+                <i class="fas fa-expand-alt"></i> View Details
+              </button>
+            </div>
+            <div class="project-tag">Commercial</div>
+          </div>
+          <div class="project-info">
+            <h3>Apex Corporate Tower</h3>
+            <p>Pune, Maharashtra</p>
+            <div class="project-meta">
+              <span><i class="fas fa-ruler-combined"></i> 1,20,000 sq.ft</span>
+              <span><i class="fas fa-clock"></i> 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="infrastructure" data-delay="200">
+          <div class="project-img-wrap">
+            <div class="project-img proj-img-3"></div>
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openProject(2)">
+                <i class="fas fa-expand-alt"></i> View Details
+              </button>
+            </div>
+            <div class="project-tag">Infrastructure</div>
+          </div>
+          <div class="project-info">
+            <h3>Grand Highway Overpass</h3>
+            <p>Nashik, Maharashtra</p>
+            <div class="project-meta">
+              <span><i class="fas fa-ruler-combined"></i> 2.5 km span</span>
+              <span><i class="fas fa-clock"></i> 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="residential" data-delay="300">
+          <div class="project-img-wrap">
+            <div class="project-img proj-img-4"></div>
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openProject(3)">
+                <i class="fas fa-expand-alt"></i> View Details
+              </button>
+            </div>
+            <div class="project-tag">Residential</div>
+          </div>
+          <div class="project-info">
+            <h3>Golden Villa Estate</h3>
+            <p>Lonavala, Maharashtra</p>
+            <div class="project-meta">
+              <span><i class="fas fa-ruler-combined"></i> 8,500 sq.ft</span>
+              <span><i class="fas fa-clock"></i> 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="commercial" data-delay="400">
+          <div class="project-img-wrap">
+            <div class="project-img proj-img-5"></div>
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openProject(4)">
+                <i class="fas fa-expand-alt"></i> View Details
+              </button>
+            </div>
+            <div class="project-tag">Commercial</div>
+          </div>
+          <div class="project-info">
+            <h3>Empire Mall & Convention</h3>
+            <p>Nagpur, Maharashtra</p>
+            <div class="project-meta">
+              <span><i class="fas fa-ruler-combined"></i> 3,50,000 sq.ft</span>
+              <span><i class="fas fa-clock"></i> 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="infrastructure" data-delay="500">
+          <div class="project-img-wrap">
+            <div class="project-img proj-img-6"></div>
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openProject(5)">
+                <i class="fas fa-expand-alt"></i> View Details
+              </button>
+            </div>
+            <div class="project-tag">Infrastructure</div>
+          </div>
+          <div class="project-info">
+            <h3>Metro Station Complex</h3>
+            <p>Hyderabad, Telangana</p>
+            <div class="project-meta">
+              <span><i class="fas fa-ruler-combined"></i> 75,000 sq.ft</span>
+              <span><i class="fas fa-clock"></i> 2024</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div class="project-modal" id="projectModal">
+    <div class="modal-overlay" onclick="closeProject()"></div>
+    <div class="modal-content glass-card">
+      <button class="modal-close" onclick="closeProject()"><i class="fas fa-times"></i></button>
+      <div class="modal-img-wrap">
+        <div class="modal-img" id="modalImg"></div>
+        <div class="modal-before-after">
+          <div class="ba-label">Before / After Reveal</div>
+          <div class="ba-slider-wrap">
+            <div class="ba-before" id="baBefore"></div>
+            <div class="ba-after" id="baAfter"></div>
+            <input type="range" class="ba-range" id="baRange" min="0" max="100" value="50" />
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <h2 id="modalTitle" class="gold-text"></h2>
+        <p id="modalLocation" class="modal-loc"><i class="fas fa-map-marker-alt"></i> <span></span></p>
+        <p id="modalDesc"></p>
+        <div class="modal-details" id="modalDetails"></div>
+        <a href="#contact" class="btn btn-gold" onclick="closeProject()">Start Your Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ WHY CHOOSE US ═══════════════════ -->
+  <section class="why-us section" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Our Advantage</span>
+        <h2 class="section-title reveal-up">Why Choose <span class="gold-text">BuildEmpire?</span></h2>
+        <p class="section-subtitle reveal-up">We combine expertise, innovation, and dedication to deliver unparalleled construction excellence.</p>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card glass-card reveal-up" data-delay="0">
+          <div class="why-icon-3d">
+            <div class="icon-ring"></div>
+            <i class="fas fa-gem"></i>
+          </div>
+          <h3>Quality Construction</h3>
+          <p>We use only premium-grade materials and employ the latest construction techniques to ensure structures that last centuries.</p>
+          <div class="why-progress">
+            <div class="progress-bar" data-width="98">
+              <div class="progress-fill"></div>
+            </div>
+            <span>98% Quality Score</span>
+          </div>
+        </div>
+
+        <div class="why-card glass-card reveal-up" data-delay="100">
+          <div class="why-icon-3d">
+            <div class="icon-ring"></div>
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>Expert Team</h3>
+          <p>Our 200+ certified engineers, architects, and project managers bring decades of combined experience to every project.</p>
+          <div class="why-progress">
+            <div class="progress-bar" data-width="95">
+              <div class="progress-fill"></div>
+            </div>
+            <span>200+ Certified Experts</span>
+          </div>
+        </div>
+
+        <div class="why-card glass-card reveal-up" data-delay="200">
+          <div class="why-icon-3d">
+            <div class="icon-ring"></div>
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>On-Time Delivery</h3>
+          <p>We pride ourselves on 96% on-time project delivery rate — your timeline is as important to us as it is to you.</p>
+          <div class="why-progress">
+            <div class="progress-bar" data-width="96">
+              <div class="progress-fill"></div>
+            </div>
+            <span>96% On-Time Rate</span>
+          </div>
+        </div>
+
+        <div class="why-card glass-card reveal-up" data-delay="300">
+          <div class="why-icon-3d">
+            <div class="icon-ring"></div>
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3>Modern Technology</h3>
+          <p>From BIM modeling and drone surveys to AR/VR walkthroughs, we leverage technology for superior project outcomes.</p>
+          <div class="why-progress">
+            <div class="progress-bar" data-width="100">
+              <div class="progress-fill"></div>
+            </div>
+            <span>100% Tech-Enabled</span>
+          </div>
+        </div>
+
+        <div class="why-card glass-card reveal-up" data-delay="400">
+          <div class="why-icon-3d">
+            <div class="icon-ring"></div>
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Customer Satisfaction</h3>
+          <p>Our 4.9/5 customer satisfaction rating reflects our unwavering commitment to exceeding client expectations.</p>
+          <div class="why-progress">
+            <div class="progress-bar" data-width="97">
+              <div class="progress-fill"></div>
+            </div>
+            <span>97% Satisfaction Rate</span>
+          </div>
+        </div>
+
+        <div class="why-card glass-card reveal-up" data-delay="500">
+          <div class="why-icon-3d">
+            <div class="icon-ring"></div>
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Safety First</h3>
+          <p>Zero-compromise safety protocols, ISO-certified processes, and comprehensive insurance on every project we undertake.</p>
+          <div class="why-progress">
+            <div class="progress-bar" data-width="100">
+              <div class="progress-fill"></div>
+            </div>
+            <span>100% Safety Compliant</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ STATS BAND ═══════════════════ -->
+  <section class="stats-band">
+    <div class="container">
+      <div class="stats-band-grid">
+        <div class="band-stat reveal-up">
+          <span class="band-num gold-text" data-target="50" data-suffix="+">0</span>
+          <span class="band-label">Projects Completed</span>
+        </div>
+        <div class="band-stat reveal-up" data-delay="100">
+          <span class="band-num gold-text" data-target="15" data-suffix="+">0</span>
+          <span class="band-label">Years Experience</span>
+        </div>
+        <div class="band-stat reveal-up" data-delay="200">
+          <span class="band-num gold-text" data-target="100" data-suffix="+">0</span>
+          <span class="band-label">Happy Clients</span>
+        </div>
+        <div class="band-stat reveal-up" data-delay="300">
+          <span class="band-num gold-text" data-target="25" data-suffix="+">0</span>
+          <span class="band-label">Ongoing Projects</span>
+        </div>
+        <div class="band-stat reveal-up" data-delay="400">
+          <span class="band-num gold-text" data-target="200" data-suffix="+">0</span>
+          <span class="band-label">Team Members</span>
+        </div>
+        <div class="band-stat reveal-up" data-delay="500">
+          <span class="band-num gold-text" data-target="12" data-suffix="">0</span>
+          <span class="band-label">Awards Won</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Client Love</span>
+        <h2 class="section-title reveal-up">What Our <span class="gold-text">Clients Say</span></h2>
+        <p class="section-subtitle reveal-up">Real words from real people who trusted BuildEmpire to build their dreams.</p>
+      </div>
+
+      <div class="testimonial-carousel reveal-up" id="testimonialCarousel">
+        <div class="testimonial-track" id="testimonialTrack">
+
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testi-quote">"BuildEmpire delivered our dream home beyond expectations. The craftsmanship, attention to detail, and transparency throughout the process was truly exceptional. I will recommend them to everyone!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar testi-av-1">AR</div>
+              <div>
+                <strong>Arjun Rajput</strong>
+                <span>Villa Owner, Mumbai</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testi-quote">"Our corporate headquarters was completed 3 weeks ahead of schedule with zero defects. The team's professionalism and use of modern technology set them apart from all other contractors."</p>
+            <div class="testi-author">
+              <div class="testi-avatar testi-av-2">PS</div>
+              <div>
+                <strong>Priya Sharma</strong>
+                <span>CEO, TechNova Pvt. Ltd.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testi-quote">"The road development project they handled for our municipality was a game-changer. Completed on budget with top-notch quality. Their project management approach is world-class."</p>
+            <div class="testi-author">
+              <div class="testi-avatar testi-av-3">RK</div>
+              <div>
+                <strong>Rahul Kulkarni</strong>
+                <span>Municipal Commissioner, Pune</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testi-quote">"The interior design team transformed our office into a stunning workspace. Creative, practical, and luxurious — exactly what we needed. The 3D previews before construction were incredible!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar testi-av-4">NK</div>
+              <div>
+                <strong>Neha Khanna</strong>
+                <span>Director, Khanna Hospitality</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testi-quote">"Five years ago we gave them a challenging hillside villa project. They delivered a masterpiece. Now we trust BuildEmpire for all our real estate development projects. Unmatched quality!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar testi-av-5">VM</div>
+              <div>
+                <strong>Vikram Mehta</strong>
+                <span>Real Estate Developer, Lonavala</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevBtn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+          <div class="carousel-dots" id="carouselDots"></div>
+          <button class="carousel-btn" id="nextBtn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT SECTION ═══════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Get In Touch</span>
+        <h2 class="section-title reveal-up">Start Your <span class="gold-text">Project Today</span></h2>
+        <p class="section-subtitle reveal-up">Ready to build something remarkable? Fill in the form and our team will reach out within 24 hours.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Let's Build Something <span class="gold-text">Extraordinary</span></h3>
+          <p>Whether it's a luxury villa, a corporate tower, or a massive infrastructure project — we're here to make it happen with precision and passion.</p>
+
+          <div class="contact-details">
+            <div class="contact-item glass-card">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt gold-text"></i></div>
+              <div>
+                <strong>Head Office</strong>
+                <span>Empire Tower, Bandra Kurla Complex, Mumbai – 400051</span>
+              </div>
+            </div>
+            <div class="contact-item glass-card">
+              <div class="contact-icon"><i class="fas fa-phone-alt gold-text"></i></div>
+              <div>
+                <strong>Phone</strong>
+                <span>+91 90288 33275</span>
+              </div>
+            </div>
+            <div class="contact-item glass-card">
+              <div class="contact-icon"><i class="fas fa-envelope gold-text"></i></div>
+              <div>
+                <strong>Email</strong>
+                <span>info@buildempire.in</span>
+              </div>
+            </div>
+            <div class="contact-item glass-card">
+              <div class="contact-icon"><i class="fas fa-clock gold-text"></i></div>
+              <div>
+                <strong>Working Hours</strong>
+                <span>Mon – Sat: 9:00 AM – 7:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form glass-card" id="contactForm" novalidate>
+            <h3>Send Us a Message</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Full Name *</label>
+                <input type="text" id="contactName" name="name" placeholder="Your Full Name" required />
+                <span class="form-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="contactPhone">Phone Number *</label>
+                <input type="tel" id="contactPhone" name="phone" placeholder="+91 00000 00000" required />
+                <span class="form-error" id="phoneError"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">Email Address *</label>
+              <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required />
+              <span class="form-error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contactService">Service Interested In</label>
+              <select id="contactService" name="service">
+                <option value="">Select a Service</option>
+                <option value="residential">Residential Construction</option>
+                <option value="commercial">Commercial Construction</option>
+                <option value="road">Road Development</option>
+                <option value="infrastructure">Infrastructure Projects</option>
+                <option value="interior">Interior Design</option>
+                <option value="management">Project Management</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Your Message *</label>
+              <textarea id="contactMessage" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-full" id="submitBtn">
+              <i class="fas fa-paper-plane"></i>
+              Send Message
+            </button>
+
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle gold-text"></i>
+              <span>Message sent successfully! We'll contact you within 24 hours.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+
+          <div class="footer-brand">
+            <a href="#home" class="nav-logo">
+              <span class="logo-icon">🏗️</span>
+              <span class="logo-text">Build<span class="logo-accent">Empire</span></span>
+            </a>
+            <p class="footer-desc">Crafting iconic structures and luxury spaces with unmatched precision since 2009. Your vision, our expertise — together we build legacies.</p>
+            <div class="footer-social">
+              <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+              <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+              <li><a href="#why-us"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+              <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-heading">Our Services</h4>
+            <ul class="footer-links">
+              <li><a href="#services"><i class="fas fa-chevron-right"></i> Residential Construction</a></li>
+              <li><a href="#services"><i class="fas fa-chevron-right"></i> Commercial Construction</a></li>
+              <li><a href="#services"><i class="fas fa-chevron-right"></i> Road Development</a></li>
+              <li><a href="#services"><i class="fas fa-chevron-right"></i> Infrastructure Projects</a></li>
+              <li><a href="#services"><i class="fas fa-chevron-right"></i> Interior Design</a></li>
+              <li><a href="#services"><i class="fas fa-chevron-right"></i> Project Management</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact-col">
+            <h4 class="footer-heading">Contact Info</h4>
+            <div class="footer-contact-items">
+              <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt gold-text"></i>
+                <span>Empire Tower, BKC, Mumbai – 400051</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-phone-alt gold-text"></i>
+                <a href="tel:+919028833275">+91 90288 33275</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-envelope gold-text"></i>
+                <a href="mailto:info@buildempire.in">info@buildempire.in</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-clock gold-text"></i>
+                <span>Mon–Sat: 9:00 AM – 7:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; 2024 BuildEmpire. All Rights Reserved. Crafted with <i class="fas fa-heart gold-text"></i> in India.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════ WHATSAPP FLOATING BUTTON ═══════════════════ -->
+  <a href="https://wa.me/919028833275?text=Hello%20I%20am%20interested%20in%20your%20construction%20services"
+     class="whatsapp-float"
+     id="whatsappBtn"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Chat with us!</span>
+    <div class="wa-pulse"></div>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

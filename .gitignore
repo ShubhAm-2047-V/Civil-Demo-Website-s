@@ -1,0 +1,10 @@
+# Jetro config and secrets
+.jetro/
+.jetro
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
